@@ -42,6 +42,12 @@
 *.idb
 *.pdb
 
+*.sln
+
+*.deps\*
+
+*.runtime\*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
@@ -51,6 +57,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+
+
+# VsCode stuff
+
 .vs/
 
 obj/
+
+*.csproj
