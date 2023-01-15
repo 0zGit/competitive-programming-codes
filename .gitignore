@@ -67,9 +67,3 @@ obj/
 
 *.csproj
 
-*.sln
-
-*.deps\*
-
-*.runtimeconfig\*
-
