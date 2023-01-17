@@ -31,7 +31,7 @@ class Solution
         int exp = 0;
 
         // Get pow value and expoent number
-        for(int i = exp; res < n; i++)
+        for (int i = exp; res < n; i++)
         {
             res = int.Parse(Math.Pow(b, i).ToString());
             pow = res;
@@ -42,9 +42,6 @@ class Solution
         int aux = 0;
         int res2, count = 0;
         int prevCount = 0;
-
-        Console.WriteLine(pow); // debug
-        Console.WriteLine(exp); // debug
 
 
         // Start comparisons...
@@ -60,8 +57,8 @@ class Solution
                 aux += res2;
                 if (aux > n)
                 {
-                    prevCount = count;
-
+                    if (prevCount < count)
+                        prevCount = count;
                     aux -= res2;
                     count = 0;
                 }
