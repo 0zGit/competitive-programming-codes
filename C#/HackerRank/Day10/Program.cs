@@ -21,6 +21,20 @@ class Solution
         int n = Convert.ToInt32(Console.ReadLine().Trim());
 
         Console.WriteLine(GetConsecutives1sInBinary(n));
+
+
+        /*          KISS...
+         *
+      
+         string binary = Convert.ToString(n, 2);
+        
+        var maxLengthString = binary.Split("0")
+                                    .OrderByDescending(x => x.Length)
+                                    .First();
+        Console.WriteLine(maxLengthString.Length);
+         
+         *
+         */
     }
 
     private static int GetConsecutives1sInBinary(int n)
