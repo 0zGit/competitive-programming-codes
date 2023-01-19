@@ -11,17 +11,21 @@ using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 using System.Text;
 using System;
-
-
+using System.Runtime.CompilerServices;
 
 class Solution
 {
     public static void Main(string[] args)
     {
-        int n = Convert.ToInt32(Console.ReadLine().Trim());
 
-        string binary = Convert.ToString(n, 2);
+        List<List<int>> arr = new List<List<int>>();
 
+        for (int i = 0; i < 6; i++)
+        {
+            arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList()
+                .Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+        }
 
+        
     }
 }
