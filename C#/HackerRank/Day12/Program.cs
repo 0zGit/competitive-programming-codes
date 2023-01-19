@@ -50,18 +50,15 @@ class Student : Person
     {
         var a = this.testScores.Sum(x => x) / testScores.Length;
 
-        if (a >= 90 && a <= 100)
-            return 'O';
-        else if (a >= 80 && a < 90)
-            return 'E';
-        else if (a >= 70 && a < 80)
-            return 'A';
-        else if (a >= 55 && a < 70)
-            return 'P';
-        else if (a >= 40 && a < 55)
-            return 'D';
-
-        return 'T';
+        switch (a)
+        {
+            case >= 90 : return 'O';
+            case >= 80 : return 'E';
+            case >= 70 : return 'A';
+            case >= 55 : return 'P';
+            case >= 40 : return 'D';
+            case < 40  : return 'T';
+        }
     }
 }
 
