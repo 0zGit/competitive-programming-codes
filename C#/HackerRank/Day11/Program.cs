@@ -26,6 +26,32 @@ class Solution
                 .Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
         }
 
-        //... ?
+        int sum = 0, k = 0, j;
+        int middle = 1;
+        List<int> hourglasses = new List<int>();
+
+        for (int l = 0; l < 4; l++)
+        {
+            for (int hourglass = 0; hourglass < 4; hourglass++)
+            {
+                for (j = k; j < k + 3; j++)
+                {
+                    sum += arr[l][j];
+                }
+                sum += arr[middle][j / 2];
+                for (j = k; j < k + 3; j++)
+                {
+                    sum += arr[l + 2][j];
+                }
+                hourglasses.Add(sum);
+                sum = 0;
+                middle++;
+                k++;
+            }
+            middle = 1;
+            k = 0;
+        }
+
+        Console.WriteLine(Math.Max(hourglasses.Max(),hourglasses.Min() * -1));
     }
 }
